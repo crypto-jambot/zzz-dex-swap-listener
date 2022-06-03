@@ -1,0 +1,6 @@
+{
+    "isLocal": false,
+    "blockchain": "ethereum",
+    "nodeProvider": "INFURA",
+    "useAlchemyWrapper": false
+}

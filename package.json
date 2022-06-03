@@ -1,0 +1,29 @@
+{
+  "name": "dex-swap-listener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuasells/dex-swap-listener.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshuasells/dex-swap-listener/issues"
+  },
+  "homepage": "https://github.com/joshuasells/dex-swap-listener#readme",
+  "dependencies": {
+    "@alch/alchemy-web3": "^1.4.2",
+    "@google-cloud/bigquery": "^5.12.0",
+    "@openzeppelin/contracts": "^4.4.1",
+    "@uniswap/sdk": "^3.0.3",
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "dotenv": "^16.0.1",
+    "web3": "^1.7.3"
+  }
+}
