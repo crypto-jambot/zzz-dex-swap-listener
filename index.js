@@ -4,12 +4,13 @@ const { BigQuery } = require("@google-cloud/bigquery");
 const axios = require('axios');
 const IUniswapV2Pair = require("@uniswap/v2-core/build/IUniswapV2Pair.json");
 const { queryPairs } = require('./util/util');
+const { UNISWAP, SUSHISWAP } = require('./constants/constants');
 
 const main = async () => {
 
     // Query BigQuery for pair to listen on.
     const bigQuery = new BigQuery();
-    const queryString = `SELECT * FROM \`${process.env.BIGQUERY_PROJECT}.${BIGQUERY_DATASET}.${BIGQUERRY_VIEW}\``;
+    const queryString = `SELECT * FROM \`${process.env.BIGQUERY_PROJECT}.${process.env.BIGQUERY_DATASET}.${process.env.BIGQUERRY_VIEW}\``;
 
     console.log("Fetching Pairs from BigQuery to listen for...")
     const arbitrageablePairs = await queryPairs(bigQuery, queryString);
@@ -23,8 +24,8 @@ const main = async () => {
 
     for (let i = 0; i < pairContracts.length; i++) {
         pairContracts[i].uPair.events.Swap({}, async () => {
-            axios.post('http://127.0.0.1:8000', {
-                activeExchange: "UNISWAP",
+            axios.post(`${process.env.BOT_ENDPOINT}`, {
+                activeExchange: UNISWAP,
                 pairInfo: arbitrageablePairs[i]
             }).then(res => {
                 console.log(`Status Code: ${res.status}`);
@@ -33,8 +34,8 @@ const main = async () => {
             });
         });
         pairContracts[i].sPair.events.Swap({}, async () => {
-            axios.post('http://127.0.0.1:8000', {
-                activeExchange: "SUSHISWAP",
+            axios.post(`${process.env.BOT_ENDPOINT}`, {
+                activeExchange: SUSHISWAP,
                 pairInfo: arbitrageablePairs[i]
             }).then(res => {
                 console.log(`Status Code: ${res.status}`);
