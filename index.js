@@ -4,7 +4,6 @@ const { BigQuery } = require("@google-cloud/bigquery");
 const axios = require('axios');
 const IUniswapV2Pair = require("@uniswap/v2-core/build/IUniswapV2Pair.json");
 const { queryPairs } = require('./util/util');
-const { UNISWAP, SUSHISWAP } = require('./constants/constants');
 
 const main = async () => {
 
