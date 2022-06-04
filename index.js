@@ -16,33 +16,26 @@ const main = async () => {
     const arbitrageablePairs = await queryPairs(bigQuery, queryString);
 
     const pairContracts = arbitrageablePairs.map((pair) => {
-        return {
-            uPair: new web3.eth.Contract(IUniswapV2Pair.abi, pair.uPairAddress),
-            sPair: new web3.eth.Contract(IUniswapV2Pair.abi, pair.sPairAddress)
-        };
+        const pairContracts = {};
+        for (const [ key, value ] of Object.entries(pair.pairAddresses)) {
+            pairContracts[key] = new web3.eth.Contract(IUniswapV2Pair.abi, value);
+        }
+        return pairContracts;
     });
 
     for (let i = 0; i < pairContracts.length; i++) {
-        pairContracts[i].uPair.events.Swap({}, async () => {
-            axios.post(`${process.env.BOT_ENDPOINT}`, {
-                activeExchange: UNISWAP,
-                pairInfo: arbitrageablePairs[i]
-            }).then(res => {
-                console.log(`Status Code: ${res.status}`);
-            }).catch(error => {
-                console.error(error);
+        for (const key of Object.keys(pairContracts[i])) {
+            pairContracts[i][key].events.Swap({}, async () => {
+                axios.post(`${process.env.BOT_ENDPOINT}`, {
+                    activeExchange: key.toUpperCase(),
+                    pairInfo: arbitrageablePairs[i]
+                }).then(res => {
+                    console.log(`Status Code: ${res.status}`);
+                }).catch(error => {
+                    console.error(error);
+                });
             });
-        });
-        pairContracts[i].sPair.events.Swap({}, async () => {
-            axios.post(`${process.env.BOT_ENDPOINT}`, {
-                activeExchange: SUSHISWAP,
-                pairInfo: arbitrageablePairs[i]
-            }).then(res => {
-                console.log(`Status Code: ${res.status}`);
-            }).catch(error => {
-                console.error(error);
-            });
-        });
+        }
     }
     console.log("Listening for swaps...");
 }
