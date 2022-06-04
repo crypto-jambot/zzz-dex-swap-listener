@@ -1,35 +1,46 @@
-require('./server');
+require("dotenv").config();
 const { web3 } = require('./setup');
 const { BigQuery } = require("@google-cloud/bigquery");
-const settings = require('./config/settings.json');
-
+const axios = require('axios');
 const IUniswapV2Pair = require("@uniswap/v2-core/build/IUniswapV2Pair.json");
-const { queryTokens } = require('./util/util');
+const { queryPairs } = require('./util/util');
 
 const main = async () => {
 
-    // Query BigQuery for tokens to enrich
+    // Query BigQuery for pair to listen on.
     const bigQuery = new BigQuery();
+    const queryString = `SELECT * FROM \`${process.env.BIGQUERY_PROJECT}.${BIGQUERY_DATASET}.${BIGQUERRY_VIEW}\``;
 
     console.log("Fetching Pairs from BigQuery to listen for...")
-    const arbitrageablePairs = await queryTokens(bigQuery);
-    
-    arbitrageablePairs.forEach((pair) => {
-        pair.uPairContract = new web3.eth.Contract(IUniswapV2Pair.abi, pair.uPairAddress);
-        pair.sPairContract = new web3.eth.Contract(IUniswapV2Pair.abi, pair.sPairAddress);
-    });
-    let counter = 0;
+    const arbitrageablePairs = await queryPairs(bigQuery, queryString);
 
-    for (const pair of arbitrageablePairs) {
-        pair.uPairContract.events.Swap({}, async () => {
-            counter++;
-            console.log(`Swap initiated on Uniswap: ${counter}`);
-            console.log(`Token0: ${pair.token0Symbol} Token1: ${pair.token1Symbol} PairAddress: ${pair.uPairAddress}`);
+    const pairContracts = arbitrageablePairs.map((pair) => {
+        return {
+            uPair: new web3.eth.Contract(IUniswapV2Pair.abi, pair.uPairAddress),
+            sPair: new web3.eth.Contract(IUniswapV2Pair.abi, pair.sPairAddress)
+        };
+    });
+
+    for (let i = 0; i < pairContracts.length; i++) {
+        pairContracts[i].uPair.events.Swap({}, async () => {
+            axios.post('http://127.0.0.1:8000', {
+                activeExchange: "UNISWAP",
+                pairInfo: arbitrageablePairs[i]
+            }).then(res => {
+                console.log(`Status Code: ${res.status}`);
+            }).catch(error => {
+                console.error(error);
+            });
         });
-        pair.sPairContract.events.Swap({}, async () => {
-            counter++;
-            console.log(`Swap initiated on Sushiswap: ${counter}`);
-            console.log(`Token0: ${pair.token0Symbol} Token1: ${pair.token1Symbol} PairAddress: ${pair.sPairAddress}`);
+        pairContracts[i].sPair.events.Swap({}, async () => {
+            axios.post('http://127.0.0.1:8000', {
+                activeExchange: "SUSHISWAP",
+                pairInfo: arbitrageablePairs[i]
+            }).then(res => {
+                console.log(`Status Code: ${res.status}`);
+            }).catch(error => {
+                console.error(error);
+            });
         });
     }
     console.log("Listening for swaps...");
