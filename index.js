@@ -15,18 +15,21 @@ const main = async () => {
     const arbitrageablePairs = await queryPairs(bigQuery, queryString);
 
     const pairContracts = arbitrageablePairs.map((pair) => {
-        const pairContracts = {};
-        for (const [ key, value ] of Object.entries(pair.pairAddresses)) {
-            pairContracts[key] = new web3.eth.Contract(IUniswapV2Pair.abi, value);
+        const pairContracts = [];
+        for (const exchange of pair.exchanges) {
+            pairContracts.push({
+                name: exchange.name,
+                pairContract: new web3.eth.Contract(IUniswapV2Pair.abi, exchange.pairAddress)
+            });
         }
         return pairContracts;
     });
 
     for (let i = 0; i < pairContracts.length; i++) {
-        for (const key of Object.keys(pairContracts[i])) {
-            pairContracts[i][key].events.Swap({}, async () => {
+        for (let j = 0; j < pairContracts[i].length; j++) {
+            pairContracts[i][j].pairContract.events.Swap({}, async () => {
                 axios.post(`${process.env.BOT_ENDPOINT}`, {
-                    activeExchange: key.toUpperCase(),
+                    activeExchange: pairContracts[i][j].name.toUpperCase(),
                     pairInfo: arbitrageablePairs[i]
                 }).then(res => {
                     console.log(`Status Code: ${res.status}`);
