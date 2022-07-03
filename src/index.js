@@ -38,20 +38,17 @@ const main = async () => {
         for (let j = 0; j < pairContractsForEachPair[i].length; j++) {
             if (pairContractsForEachPair[i][j].pairContract != null) {
                 pairContractsForEachPair[i][j].pairContract.events.Swap({}, async () => {
-                    // axios
-                    //     .post(`${process.env.BOT_ENDPOINT}`, {
-                    //         activeExchange: pairContractsForEachPair[i][j].name.toUpperCase(),
-                    //         pairInfo: arbitrageablePairs[i],
-                    //     })
-                    //     .then((res) => {
-                    //         console.log(`Status Code: ${res.status}`);
-                    //     })
-                    //     .catch((error) => {
-                    //         console.error(error);
-                    //     });
-                    console.log(
-                        `I have recieved a Swap event from ${pairContractsForEachPair[i][j].name}`
-                    );
+                    axios
+                        .post(`${process.env.BOT_ENDPOINT}`, {
+                            activeExchange: pairContractsForEachPair[i][j].name.toUpperCase(),
+                            pairInfo: arbitrageablePairs[i],
+                        })
+                        .then((res) => {
+                            console.log(`Status Code: ${res.status}`);
+                        })
+                        .catch((error) => {
+                            console.error(error);
+                        });
                 });
             }
         }
