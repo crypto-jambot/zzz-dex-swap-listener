@@ -2,16 +2,18 @@
   "name": "dex-swap-listener",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node -r esm .",
+    "dev": "nodemon -r esm ./src/index.js",
+    "doc": "jsdoc -c jsdoc.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joshuasells/dex-swap-listener.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/joshuasells/dex-swap-listener/issues"
   },
@@ -25,6 +27,11 @@
     "@uniswap/v2-periphery": "^1.1.0-beta.0",
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
-    "web3": "^1.7.3"
+    "web3": "^1.7.3",
+    "esm": "^3.2.25"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.10",
+    "nodemon": "^2.0.16"
   }
 }

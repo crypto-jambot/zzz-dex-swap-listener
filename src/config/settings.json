@@ -1,0 +1,7 @@
+{
+  "isLocal": false,
+  "blockchain": "ethereum",
+  "nodeProvider": "INFURA",
+  "bqDataset": "ethereum",
+  "bqTable": "arbitrageable_pairs"
+}
