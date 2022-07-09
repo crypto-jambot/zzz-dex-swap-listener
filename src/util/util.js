@@ -26,3 +26,19 @@ const query = async (queryString) => {
     const [rows] = await job.getQueryResults();
     return rows;
 };
+
+export const getPairContractsForEachPair = (arbitrageablePairs) => {
+    return arbitrageablePairs.map((pair) => {
+        const pairContracts = [];
+        for (const exchange of pair.exchanges) {
+            pairContracts.push({
+                name: exchange.name,
+                pairContract:
+                    exchange.pairAddress != null
+                        ? new web3.eth.Contract(IUniswapV2Pair.abi, exchange.pairAddress)
+                        : null,
+            });
+        }
+        return pairContracts;
+    });
+};

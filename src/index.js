@@ -11,37 +11,24 @@ import 'dotenv/config';
 import { web3 } from './setup/setup';
 import axios from 'axios';
 import IUniswapV2Pair from '@uniswap/v2-core/build/IUniswapV2Pair.json';
-import { queryPairs } from './util/util';
+import { queryPairs, getPairContractsForEachPair } from './util/util';
 
 const main = async () => {
     // Query BigQuery for pair to listen on.
     console.log('Fetching Pairs from BigQuery to listen for...');
     const arbitrageablePairs = await queryPairs();
 
-    const pairContractsForEachPair = arbitrageablePairs.map((pair) => {
-        const pairContracts = [];
-        for (const exchange of pair.exchanges) {
-            pairContracts.push({
-                name: exchange.name,
-                pairContract:
-                    exchange.pairAddress != null
-                        ? new web3.eth.Contract(IUniswapV2Pair.abi, exchange.pairAddress)
-                        : null,
-            });
-        }
-        return pairContracts;
-    });
+    const pairContractsForEachPair = getPairContractsForEachPair(arbitrageablePairs);
 
-    // For each set of contracts for an exachange
+    // For each set of contracts for a token pair
     for (let i = 0; i < pairContractsForEachPair.length; i++) {
-        // For each contract in the specified exchange
+        // For each contract in the specified token pair
         for (let j = 0; j < pairContractsForEachPair[i].length; j++) {
             if (pairContractsForEachPair[i][j].pairContract != null) {
                 pairContractsForEachPair[i][j].pairContract.events.Swap({}, async () => {
                     axios
                         .post(`${process.env.BOT_ENDPOINT}`, {
-                            activeExchange: pairContractsForEachPair[i][j].name.toUpperCase(),
-                            pairInfo: arbitrageablePairs[i],
+                            pair: arbitrageablePairs[i],
                         })
                         .then((res) => {
                             console.log(`Status Code: ${res.status}`);
@@ -61,32 +48,20 @@ const runAll = async () => {
     console.log('Fetching Pairs from BigQuery to listen for...');
     const arbitrageablePairs = await queryPairs();
 
-    const pairContractsForEachPair = arbitrageablePairs.map((pair) => {
-        const pairContracts = [];
-        for (const exchange of pair.exchanges) {
-            pairContracts.push({
-                name: exchange.name,
-                pairContract:
-                    exchange.pairAddress != null
-                        ? new web3.eth.Contract(IUniswapV2Pair.abi, exchange.pairAddress)
-                        : null,
-            });
-        }
-        return pairContracts;
-    });
+    const pairContractsForEachPair = getPairContractsForEachPair(arbitrageablePairs);
 
     console.log(`Running through ${arbitrageablePairs.length} pairs...`);
 
     const resultData = [];
-    // For each set of contracts for an exachange
+    // For each set of contracts for a token pair
     for (let i = 0; i < pairContractsForEachPair.length; i++) {
-        // For each contract in the specified exchange, we break after the first run because the bot will check all exchanges.
+        // For each contract in the specified token pair.
+        // We break after the first run because the bot will check all exchanges for that specific pair.
         for (let j = 0; j < pairContractsForEachPair[i].length; j++) {
             if (pairContractsForEachPair[i][j].pairContract != null) {
                 try {
                     const { data } = await axios.post(`${process.env.BOT_ENDPOINT}`, {
-                        activeExchange: pairContractsForEachPair[i][j].name.toUpperCase(),
-                        pairInfo: arbitrageablePairs[i],
+                        pair: arbitrageablePairs[i],
                     });
                     if (data != null) {
                         resultData.push(data);
@@ -97,7 +72,7 @@ const runAll = async () => {
                 }
             }
         }
-        console.log(i);
+        // Decide how many to run through
         if (i == 100) {
             break;
         }
