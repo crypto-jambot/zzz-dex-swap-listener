@@ -27,9 +27,7 @@ const main = async () => {
             if (pairContractsForEachPair[i][j].pairContract != null) {
                 pairContractsForEachPair[i][j].pairContract.events.Swap({}, async () => {
                     axios
-                        .post(`${process.env.BOT_ENDPOINT}`, {
-                            pair: arbitrageablePairs[i],
-                        })
+                        .post(`${process.env.BOT_ENDPOINT}`, arbitrageablePairs[i])
                         .then((res) => {
                             console.log(`Status Code: ${res.status}`);
                         })
@@ -60,9 +58,10 @@ const runAll = async () => {
         for (let j = 0; j < pairContractsForEachPair[i].length; j++) {
             if (pairContractsForEachPair[i][j].pairContract != null) {
                 try {
-                    const { data } = await axios.post(`${process.env.BOT_ENDPOINT}`, {
-                        pair: arbitrageablePairs[i],
-                    });
+                    const { data } = await axios.post(
+                        `${process.env.BOT_ENDPOINT}`,
+                        arbitrageablePairs[i]
+                    );
                     if (data != null) {
                         resultData.push(data);
                     }
