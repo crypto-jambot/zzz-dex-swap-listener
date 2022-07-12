@@ -8,8 +8,10 @@
  *********************************************************************/
 
 import 'dotenv/config';
+import { web3 } from '../setup/setup';
 import { BigQuery } from '@google-cloud/bigquery';
 import settings from '../config/settings.json';
+import IUniswapV2Pair from '@uniswap/v2-core/build/IUniswapV2Pair.json';
 
 export const queryPairs = async () => {
     const queryString = `SELECT * FROM \`${process.env.BIGQUERY_PROJECT}.${settings.bqDataset}.${settings.bqTable}\``;
