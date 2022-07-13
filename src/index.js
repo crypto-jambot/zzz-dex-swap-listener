@@ -9,6 +9,7 @@
 
 import 'dotenv/config';
 import axios from 'axios';
+import Big from 'big.js';
 import { queryPairs, getPairContractsForEachPair } from './util/util';
 
 const main = async () => {
@@ -48,7 +49,7 @@ const runAll = async () => {
 
     console.log(`Running through ${arbitrageablePairs.length} pairs...`);
 
-    // const resultData = [];
+    const resultData = [];
     // For each set of contracts for a token pair
     for (let i = 0; i < pairContractsForEachPair.length; i++) {
         // For each contract in the specified token pair.
@@ -60,9 +61,9 @@ const runAll = async () => {
                         `${process.env.BOT_ENDPOINT}`,
                         arbitrageablePairs[i]
                     );
-                    // if (data != null) {
-                    //     resultData.push(data);
-                    // }
+                    if (data != '') {
+                        resultData.push(data);
+                    }
                     break;
                 } catch (err) {
                     console.error(err.message);
@@ -71,18 +72,30 @@ const runAll = async () => {
         }
         console.log(i);
         // Decide how many to run through
-        // if (i == 50) {
+        // if (i == 100) {
         //     break;
         // }
     }
 
     console.log('Done checking arb opportunities.');
-    // const bestArb = resultData.reduce((previous, current) => {
-    //     return current.netProfit > previous.netProfit ? current : previous;
-    // }, resultData[0]);
 
-    // console.log(bestArb);
+    resultData.sort((a, b) => {
+        let aFormattedGrossProfit = Big(a.grossProfit)
+            .div(Big(10).pow(Number(a.pool1OutputToken.decimals)))
+            .toFixed(10);
+        let bFormattedGrossProfit = Big(b.grossProfit)
+            .div(Big(10).pow(Number(b.pool1OutputToken.decimals)))
+            .toFixed(10);
+
+        if (Big(aFormattedGrossProfit).lt(Big(bFormattedGrossProfit))) return 1;
+        if (Big(aFormattedGrossProfit).gt(Big(bFormattedGrossProfit))) return -1;
+        return 0;
+    });
+
+    for (let i = 0; i < 50; i++) {
+        console.log(resultData[i].instructions);
+    }
 };
 
-// main();
-runAll();
+main();
+// runAll();
