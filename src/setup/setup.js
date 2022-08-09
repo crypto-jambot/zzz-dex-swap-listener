@@ -17,13 +17,30 @@ let web3;
 
 // Web3 setup
 if (!settings.isLocal) {
-    if (settings.nodeProvider == Constants.ALCHEMY) {
-        web3 = createAlchemyWeb3(
-            `${Constants.ALCHEMY_WRAPPER_ETH_ENDPOINT}${process.env.ALCHEMY_API_KEY}`,
-            { maxRetries: 100 }
-        );
-    } else {
-        web3 = new Web3(`${Constants.INFURA_ETH_ENDPOINT}${process.env.INFURA_API_KEY}`);
+    switch (settings.nodeProvider) {
+        case Constants.ALCHEMY:
+            web3 = createAlchemyWeb3(`${Constants.ALCHEMY_WRAPPER_ETH_ENDPOINT}${process.env.ALCHEMY_API_KEY}`, { maxRetries: 100 });
+            break;
+        case Constants.INFURA:
+            web3 = new Web3(`${Constants.INFURA_ETH_ENDPOINT}${process.env.INFURA_API_KEY}`);
+            break;
+        case Constants.GET_BLOCK_BSC:
+            web3 = new Web3(`${Constants.GET_BLOCK_BSC_ENDPOINT}${process.env.GET_BLOCK_API_KEY}`);
+            break;
+        case Constants.CHAINSTACK_BSC:
+            web3 = new Web3(Constants.CHAINSTACK_BSC_ENDPOINT);
+            break;
+        case Constants.CHAINSTACK_POLYGON:
+            web3 = new Web3(Constants.CHAINSTACK_POLYGON_ENDPOINT);
+            break;
+        case Constants.QUICKNODE_BSC:
+            web3 = new Web3(Constants.QUICKNODE_BSC_ENDPOINT);
+            break;
+        case Constants.MORALIS_BSC:
+            web3 = new Web3(Constants.MORALIS_BSC_ENDPOINT);
+            break;
+        default:
+            web3 = new Web3(Constants.LOCALHOST_ETH_ENDPOINT);
     }
 } else {
     web3 = new Web3(Constants.LOCALHOST_ETH_ENDPOINT);

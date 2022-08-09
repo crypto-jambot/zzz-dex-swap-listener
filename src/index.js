@@ -10,18 +10,15 @@
 import 'dotenv/config';
 import axios from 'axios';
 import Big from 'big.js';
-import { queryPairs, getPairContractsForEachPair } from './util/util';
+import { queryPairs, getPairContractsForEachPair, querySinglePair, getPairContract, sendPairs } from './util/util';
 
-const main = async () => {
-    // Query BigQuery for pair to listen on.
+const listen = async () => {
     console.log('Fetching Pairs from BigQuery to listen for...');
     const arbitrageablePairs = await queryPairs();
 
     const pairContractsForEachPair = getPairContractsForEachPair(arbitrageablePairs);
 
-    // For each set of contracts for a token pair
     for (let i = 0; i < pairContractsForEachPair.length; i++) {
-        // For each contract in the specified token pair
         for (let j = 0; j < pairContractsForEachPair[i].length; j++) {
             if (pairContractsForEachPair[i][j].pairContract != null) {
                 pairContractsForEachPair[i][j].pairContract.events.Swap({}, async () => {
@@ -40,8 +37,14 @@ const main = async () => {
     console.log('Listening for swaps...');
 };
 
-const runAll = async () => {
-    // Query BigQuery for pair to listen on.
+const runOne = async (tokenAddress) => {
+    console.log('Fetching Pair from BigQuery to listen for...');
+    const arbitrageablePair = await querySinglePair(tokenAddress);
+    await axios.post(`${process.env.BOT_ENDPOINT}`, arbitrageablePair[0]);
+    console.log('Done.');
+};
+
+const runAllSync = async () => {
     console.log('Fetching Pairs from BigQuery to listen for...');
     const arbitrageablePairs = await queryPairs();
 
@@ -50,17 +53,11 @@ const runAll = async () => {
     console.log(`Running through ${arbitrageablePairs.length} pairs...`);
 
     const resultData = [];
-    // For each set of contracts for a token pair
     for (let i = 0; i < pairContractsForEachPair.length; i++) {
-        // For each contract in the specified token pair.
-        // We break after the first run because the bot will check all exchanges for that specific pair.
         for (let j = 0; j < pairContractsForEachPair[i].length; j++) {
             if (pairContractsForEachPair[i][j].pairContract != null) {
                 try {
-                    const { data } = await axios.post(
-                        `${process.env.BOT_ENDPOINT}`,
-                        arbitrageablePairs[i]
-                    );
+                    const { data } = await axios.post(`${process.env.BOT_ENDPOINT}`, arbitrageablePairs[i]);
                     if (data != '') {
                         resultData.push(data);
                     }
@@ -71,31 +68,70 @@ const runAll = async () => {
             }
         }
         console.log(i);
-        // Decide how many to run through
-        // if (i == 100) {
+        // if (i == 10) {
         //     break;
         // }
     }
 
     console.log('Done checking arb opportunities.');
+    console.log(`${resultData.length} potential arbs found.`);
 
     resultData.sort((a, b) => {
-        let aFormattedGrossProfit = Big(a.grossProfit)
-            .div(Big(10).pow(Number(a.pool1OutputToken.decimals)))
-            .toFixed(10);
-        let bFormattedGrossProfit = Big(b.grossProfit)
-            .div(Big(10).pow(Number(b.pool1OutputToken.decimals)))
-            .toFixed(10);
-
-        if (Big(aFormattedGrossProfit).lt(Big(bFormattedGrossProfit))) return 1;
-        if (Big(aFormattedGrossProfit).gt(Big(bFormattedGrossProfit))) return -1;
+        if (Big(a.estimatedNetProfit).lt(Big(b.estimatedNetProfit))) return 1;
+        if (Big(a.estimatedNetProfit).gt(Big(b.estimatedNetProfit))) return -1;
         return 0;
     });
 
-    for (let i = 0; i < 50; i++) {
-        console.log(resultData[i].instructions);
+    if (resultData.length == 0) return;
+
+    for (let i = 0; i < 40; i++) {
+        console.table(resultData[i].data);
+    }
+};
+
+const runAll = async () => {
+    console.log('Fetching Pairs from BigQuery to listen for...');
+    const arbitrageablePairs = await queryPairs();
+
+    const pairContractsForEachPair = getPairContractsForEachPair(arbitrageablePairs);
+
+    console.log(`Running through ${arbitrageablePairs.length} pairs...`);
+
+    const resultData = await sendPairs(arbitrageablePairs, pairContractsForEachPair);
+
+    console.log('Done checking arb opportunities.');
+    console.log(`${resultData.length} potential arbs found.`);
+
+    if (resultData.length == 0) return;
+
+    resultData.sort((a, b) => {
+        if (Big(a.estimatedNetProfit).lt(Big(b.estimatedNetProfit))) return 1;
+        if (Big(a.estimatedNetProfit).gt(Big(b.estimatedNetProfit))) return -1;
+        return 0;
+    });
+
+    for (let i = 0; i < 40; i++) {
+        console.table(resultData[i].data);
+    }
+};
+
+const main = async () => {
+    switch (process.argv[2]) {
+        case 'listen':
+            listen();
+            break;
+        case 'runAllSync':
+            runAllSync();
+            break;
+        case 'runAll':
+            runAll();
+            break;
+        case 'runOne':
+            runOne(process.argv[3]);
+            break;
+        default:
+            listen();
     }
 };
 
 main();
-// runAll();

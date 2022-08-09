@@ -1,7 +1,7 @@
 {
   "isLocal": false,
-  "blockchain": "ethereum",
-  "nodeProvider": "INFURA",
-  "bqDataset": "ethereum",
+  "blockchain": "polygon",
+  "nodeProvider": "CHAINSTACK_POLYGON",
+  "bqDataset": "polygon",
   "bqTable": "arbitrageable_pairs"
 }

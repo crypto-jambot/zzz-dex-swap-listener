@@ -1,0 +1,921 @@
+Done checking arb opportunities.
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │   'apeswap (0xc0aCaCab94006edE5c2705B65919b6F9573F9866)'   │
+│         Final Exchange          │ 'pancakeswap (0x36fdd05bCBA7CBe31bc50Ec0b5fD1Ee43e5d2e11)' │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'VOXb (0xC227f8EECC481A8e8BAa30A4754B109b81C4DfA4)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000997842319916593'                   │
+│      Estimated Net Profit       │                  '-0.001399932680083407'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '479555'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002397775'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0xebB5E3B68a4B7C4555DA22883bAED0F89cbF6D72)' │
+│         Final Exchange          │  'sushiswap (0x7900A38bB47B385fA8de1a90eA0C058B9e162bCa)'  │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'MVRS (0xa5fD63b9B300664f7BF342407C37b4AF4FecdBE1)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000762637485783175'                   │
+│      Estimated Net Profit       │                  '-0.001549657514216825'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '462459'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002312295'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0x3a42841F6e31D83F132743f5DfC1743DB3eD8bBf)' │
+│         Final Exchange          │ 'knightswap (0x5Fa9DE6832476D24C60A9B53750B74DD0BCAe2e5)'  │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │     'GUT (0xb6bA8c98021C31A02DD65e9bE97729EbA859d4E2)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000778501628243955'                   │
+│      Estimated Net Profit       │                  '-0.001574998371756045'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '470700'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.0023535'                         │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │  'sushiswap (0x7c4e7CfaeE53f1919587D71b4AB78B37EaeFEf79)'  │
+│         Final Exchange          │ 'pancakeswap (0x299eBC1265D88ceaF57febC38d2345E717242ca3)' │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'THCF (0x58440565feF5e558fFd1078e3E6ec3e3e80598C9)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000726059023221686'                   │
+│      Estimated Net Profit       │                  '-0.001580575976778314'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '461327'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002306635'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0x676086146E681C48E73B243c68A3Db8745986FdA)' │
+│         Final Exchange          │   'apeswap (0xC99AA0898c64C37d4ED65918e4aB7a1EDDa7b433)'   │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'DARK (0x4c614823C0f382f7E9a5586620E8030Eda97B665)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000715548735832147'                   │
+│      Estimated Net Profit       │                  '-0.001592096264167853'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '461529'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002307645'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0xdaa610424d7612E2A3eE63fCAA976b886ad7D305)' │
+│         Final Exchange          │   'apeswap (0x8dDBb6f75196b527388CeBa5510d617c5B417E09)'   │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │     'KNR (0xfdB31192993DF034fc42Dc411A5D20fF82C0Fc2f)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000719287257107455'                   │
+│      Estimated Net Profit       │                  '-0.001604632742892545'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '464784'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.00232392'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │  'babyswap (0xC3fE6343E97689416FbdeC0B43edDdB400a3A5bA)'   │
+│         Final Exchange          │ 'pancakeswap (0xC60730B8CcBA73D43D73F9A8681C483a63244692)' │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │     'Apa (0xE44B358835221FcC776cA8E159dabc933Cd8E7D6)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000845826255702144'                   │
+│      Estimated Net Profit       │                  '-0.001645188744297856'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '498203'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002491015'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0x2E35376305f9487621f4205B49AcFA324f910d97)' │
+│         Final Exchange          │   'apeswap (0x6DD825E6342B8511984a6E1b97D58C480CA29135)'   │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'HEPA (0x9159F30F1c3F0317b0a2D6bC176f29266Be790eE)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000634891186887742'                   │
+│      Estimated Net Profit       │                  '-0.001670298813112258'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '461038'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.00230519'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │   'apeswap (0x1696A65eA693593Ba771b5A7aFC54C8eaf4C20dE)'   │
+│         Final Exchange          │ 'pancakeswap (0xD20f5ddBB4DcCe9C0dB2d4b23b5693706A9a6306)' │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │     'BFT (0xa4F93159cE0A4B533b443c74b89967C60A5969F8)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000616656813578215'                   │
+│      Estimated Net Profit       │                  '-0.001688978186421785'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '461127'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002305635'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0x5F442Fc480fD32bD69b9a7809E03A209704e8A1A)' │
+│         Final Exchange          │   'apeswap (0xCa516FeD39D10f16410D692399Eb76eAb00A05c7)'   │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │   'AVNGRS (0x0527785C025894B7D5E5DC28eaa980a453749745)'    │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000630950141631387'                   │
+│      Estimated Net Profit       │                  '-0.001696009858368613'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '465392'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.00232696'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0x698c38b35269317f73a01D5984948c9Fb130E314)' │
+│         Final Exchange          │  'sushiswap (0x87fB44bd69294f35f9e72E490bdB979cdC3D45a0)'  │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'DEFI (0xd9E407fFd8C7c74c09BAc201FC41A5EAAB4F79Fa)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000775714761920518'                   │
+│      Estimated Net Profit       │                  '-0.001706840238079482'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '496511'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002482555'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │   'apeswap (0xcEe93CFD9461270728697824d67d294bcc2E5f19)'   │
+│         Final Exchange          │ 'pancakeswap (0x0362A102e71cBDA6d91EE62aC0610ECF64e1E8Fc)' │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'USDD (0xa7DBc37eb9B70CC9D38f1169DD0056Ce7D23B698)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000602997397588401'                   │
+│      Estimated Net Profit       │                  '-0.001707202602411599'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '462040'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.0023102'                         │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0xF1152a2F445C666fC8003a55b2C41827AC9B8b07)' │
+│         Final Exchange          │  'sushiswap (0xcDb99B2f2231D18b31fAE037eFEC102cC0361F58)'  │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │ 'Apex Token (0x7eeb5c17aAA7eE3d000C91b654513FBAeA789139)'  │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.00060020769232257'                    │
+│      Estimated Net Profit       │                   '-0.00171622730767743'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '463287'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002316435'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │  'sushiswap (0xc86c8aC8D1714d00c971756e36558c9f1512D6cB)'  │
+│         Final Exchange          │ 'pancakeswap (0x2c0A3e4872B5c7682B5a47F88C48980bC87f6409)' │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'LOOK (0x73cBA57Ad8bC775A5345D9a0de2e90C74621D802)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000545432541023889'                   │
+│      Estimated Net Profit       │                  '-0.001758687458976111'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '460824'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.00230412'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0x89f1dad936943f8e7efB7F0039F841a1C40440A1)' │
+│         Final Exchange          │  'sushiswap (0x99fbCdB5a94365BAb1B44EB7d6CAeBE98050dEB8)'  │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'WPKT (0x1C25222994531C4AC35E4d94bbf7552c9aa92E32)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000550144630978866'                   │
+│      Estimated Net Profit       │                  '-0.001759665369021134'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '461962'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.00230981'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0xA647ddD5b49987D55027eE448172c7a312BD01cD)' │
+│         Final Exchange          │   'apeswap (0xDfa57bd8154832F0bD84E2CB0bC75F08a32A8d88)'   │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │   'COPYCAT (0xd635B32688F36ee4a7FE117b4C91DD811277ACB6)'   │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.00053941532825765'                    │
+│      Estimated Net Profit       │                   '-0.00176689967174235'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '461263'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002306315'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │   'apeswap (0x1623aacC084E98e1946CEBA5685d9bff60418fb4)'   │
+│         Final Exchange          │ 'pancakeswap (0xff9e5A5e64f91EcD2497cbDE83082FF82714E521)' │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │     'ENY (0xbfF59Ec270e1De9c5e34e17CE01bAe3B2155C43e)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.00052941973610394'                    │
+│      Estimated Net Profit       │                   '-0.00179572026389606'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '465028'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.00232514'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0x8F9Eb54E909eF04b4498348B6fc9cfB100497D04)' │
+│         Final Exchange          │   'apeswap (0xA72901417b1D456B2963A965d4d07E03d560df24)'   │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'NITEX (0x95897Be30dEAEFB20FB7B3960613042690611a50)'    │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000515475241509005'                   │
+│      Estimated Net Profit       │                  '-0.001806084758490995'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '464312'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.00232156'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │   'apeswap (0x46a1bC48CB98496Ee130C835b4888dBAcB2DfB17)'   │
+│         Final Exchange          │ 'pancakeswap (0xDc422f7B9Bfc05d9E232131Eab0baB488e4c1b12)' │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'HORA (0xA6Fd7B5C9eee30309B00B65436a284e2053251e5)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000501420246871459'                   │
+│      Estimated Net Profit       │                  '-0.001807019753128541'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '461688'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.00230844'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0xC2B44b7A9209b60846414264edC411663E75E59a)' │
+│         Final Exchange          │   'apeswap (0x6dFdf2A978065b5E787D37d5aE01A944a76a82d1)'   │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'EDXA (0x952cEbF65f3A9F11ef0222Aefe0608d26621B097)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000492626227430381'                   │
+│      Estimated Net Profit       │                  '-0.001811978772569619'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '460921'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002304605'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0x465CCc6a762FF8D08068747c11e23846fc59685A)' │
+│         Final Exchange          │  'sushiswap (0x4dd0a4d2726Eae914B37f299496570C968Ab3915)'  │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │     'MDT (0xBda0717794A812A0B3207476799cbD8672067E34)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000490700557992105'                   │
+│      Estimated Net Profit       │                  '-0.001812734442007895'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '460687'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002303435'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0x8BF4Cc86b4EF2CeC34B345125b7090f856d3703f)' │
+│         Final Exchange          │   'apeswap (0x28E5587AA680E75AC0080403BEeBed4Ee12A91Cc)'   │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │     'RTF (0xb4A92eDAb7c9Ba94b6637E8052D8bd133EC4221C)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000508022836340544'                   │
+│      Estimated Net Profit       │                  '-0.001813402163659456'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '464285'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002321425'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0x27A76aF280C3532Dc95E2803F173aC4C88a28562)' │
+│         Final Exchange          │   'apeswap (0xCb820aed4fE1452CcE475820d2faBDE1b32a57b4)'   │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │   'HEROEGG (0xcfBb1BfA710cb2ebA070CC3beC0C35226FeA4BAF)'   │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000485451209838134'                   │
+│      Estimated Net Profit       │                  '-0.001822268790161866'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '461544'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.00230772'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │   'apeswap (0xA980D9a3a4659676f108C651C4Ad900665475057)'   │
+│         Final Exchange          │ 'pancakeswap (0xD3c59be1469d31Db1BE7eA7b3f42909c1bB8ad4d)' │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │     'XXX (0x144BE0E7391dD19c7b58B83c44Ae38e53E5EdDf6)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000506356597914002'                   │
+│      Estimated Net Profit       │                  '-0.001829958402085998'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '467263'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002336315'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0x0f71bbA0B12C983118F672D1FFBAE002a1Fcdff2)' │
+│         Final Exchange          │   'apeswap (0x3B908cE8ae71bd5A11C5fD995B6fAF2ced4798fF)'   │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'BEET (0xcd619a8ec557adB00a7c818a5AC5dFBD9007d3ac)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000626054509862493'                   │
+│      Estimated Net Profit       │                  '-0.001836555490137507'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '492522'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.00246261'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0xc38C14EfB2b27f14163915F7e9900E702fD3661C)' │
+│         Final Exchange          │  'sushiswap (0x4585371aB37DD37ee2918B9753F9B89D6d90f42A)'  │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'GREE (0x9dB667fbf51FdD3f9E7447199929449119cFc711)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000497974511437921'                   │
+│      Estimated Net Profit       │                  '-0.001837600488562079'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '467115'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002335575'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0xD2021712Ddc755b7567A2A6245E11ba34C1Df9c7)' │
+│         Final Exchange          │   'apeswap (0xa12a078f62cc1b02e00db33e66cc7dA8717759dA)'   │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'GFNC (0xa47d87704d8fdE73A19eaB2A2343947aE8537b02)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000490409133025411'                   │
+│      Estimated Net Profit       │                  '-0.001845965866974589'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '467275'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002336375'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0x0A8a35e01C12C3F09DAA0Afa24f8A640e3680C46)' │
+│         Final Exchange          │  'sushiswap (0xf7D36DA15C9a6265C7EdEB30c0490eA3d4829a6E)'  │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │     'IMN (0x22f6DEc19fA28a6B9Ee8FD754486bA552540BCBe)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000461931293603033'                   │
+│      Estimated Net Profit       │                  '-0.001850323706396967'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '462451'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002312255'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0x9E5Fc714A9aD9E285606Fb47ac3C98667d78d8E0)' │
+│         Final Exchange          │  'babyswap (0xABb69C8e30Bd10fe78E96561d32d6c96d19f7Dd3)'   │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │     'TWC (0x6f65e3d5C8Ab6b3C1624F6fE9d8c8DC3E504e3B3)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000480247363076132'                   │
+│      Estimated Net Profit       │                  '-0.001851157636923868'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '466281'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002331405'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │  'sushiswap (0xdFb0D53425ad056aAf77f27a57ECf955B17b493C)'  │
+│         Final Exchange          │ 'pancakeswap (0x84bc1D400756eBEE3ECC46D1Da91d15fdb36B706)' │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │     'LTN (0x1D49B39aF9fBcfA439266504c19F3BCB3458BdBA)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000455015120179651'                   │
+│      Estimated Net Profit       │                  '-0.001857349879820349'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '462473'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002312365'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0x822c8FBb90E206089c76b254Db01fB797c97E673)' │
+│         Final Exchange          │  'sushiswap (0x2A9d2e91D6FD1c62decb80A1E15DF1639f746311)'  │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'PISS (0x41aFc4220b08D1F336eACf231cd8Ce5C7e7fB9c9)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000448536241295299'                   │
+│      Estimated Net Profit       │                  '-0.001858308758704701'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '461369'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002306845'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │  'babyswap (0x47d1D7C75C450ec78dC3A952A23a2e548616f5Dd)'   │
+│         Final Exchange          │ 'pancakeswap (0x593CFD3C0Ea1473B1814FC6075770f5057813e51)' │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'HHMR (0xdf6aE71D51f12466BbAe4B0686eda3627ad13d94)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000465905592233985'                   │
+│      Estimated Net Profit       │                  '-0.001863724407766015'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '465926'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.00232963'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │   'apeswap (0xFEaf192c2662E5700bDa860c58d2686d9cc12Ec8)'   │
+│         Final Exchange          │ 'pancakeswap (0x687efea126216159b628Fd3F5B7dE996C6cd42D6)' │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'TYPH (0x4090e535F2e251F5F88518998B18b54d26B3b07c)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000444997428699796'                   │
+│      Estimated Net Profit       │                  '-0.001864212571300204'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '461842'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.00230921'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0xbaC043Eb0ff3d6EcB75Df55AD53c05FeA0234d4d)' │
+│         Final Exchange          │   'apeswap (0x05b41dd743A9B65893feB8fc7af85A07DA25F4d6)'   │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │     'PCC (0x2e6cEa2765345f406b53Fa0C968150C6a2b30112)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000442799148249911'                   │
+│      Estimated Net Profit       │                  '-0.001864905851750089'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '461541'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002307705'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │   'apeswap (0xe7373955487938BdFd0F9d9cE0759DbD07196747)'   │
+│         Final Exchange          │ 'pancakeswap (0xad5b1468Cd331ED9567aA3D96b2B81Dc56BD8275)' │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │     'CBU (0x912EF48F4da0C68D6c7C6D0b35d4e62E71771F33)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000450287539618326'                   │
+│      Estimated Net Profit       │                  '-0.001871677460381674'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '464393'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002321965'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │  'sushiswap (0x86A0555A4187C3f00D894572699aff2262c436B8)'  │
+│         Final Exchange          │ 'pancakeswap (0x255DE3949018b44ce930d638404DbdBA9f8971D3)' │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │     'PRC (0x0F48128537ad795B70fE0FF505386EdE303dB185)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000422682594027644'                   │
+│      Estimated Net Profit       │                  '-0.001881537405972356'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '460844'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.00230422'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0x91CFDC037466ed6Ce1B50012dFea303df175e5d8)' │
+│         Final Exchange          │   'apeswap (0x7765833bfEBf8A4BDf9DF36a8a2D5fDc35421D2B)'   │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'BBET (0xea3A4094C463fd2e7Fe10414D6C5d4B8acCF012B)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000484165485613673'                   │
+│      Estimated Net Profit       │                  '-0.001883844514386327'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '473602'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.00236801'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0xF4558DA592605586829244ed80AeE9A9DcDEfE43)' │
+│         Final Exchange          │   'apeswap (0x11514B834EFCB28DA62D44429746d04e6b481ccf)'   │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'CRUDE (0x8db702D9d561921C45Be8DF38830A653e4BC0299)'    │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000411496179089283'                   │
+│      Estimated Net Profit       │                  '-0.001892438820910717'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '460787'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                       '0.002303935'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0x1Cf0644e8F75b0ef43201580F26FD97A18A61fE6)' │
+│         Final Exchange          │  'sushiswap (0xBf4d12cdC58753df26d0235c5A10a3395B89332C)'  │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │     'GBL (0x719Ea43aE552Fc21ACB7FC48a2F870C3DBBc93a2)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000568524391164116'                   │
+│      Estimated Net Profit       │                  '-0.001898685608835884'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '493442'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.00246721'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│             (index)             │                           Values                           │
+├─────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│        Initial Exchange         │ 'pancakeswap (0xccEb1285E1496755000BDCA2933447D18394a46f)' │
+│         Final Exchange          │   'apeswap (0x0c086FAeBE5661e10788b80a1164c8437E552744)'   │
+│        Flash Loan Token         │    'WBNB (0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c)'     │
+│         Arbitrage Token         │    'COKO (0xBADbe33079CC56824C35B66a75DBcef6b6c8bbe0)'     │
+│                -                │                                                            │
+│          Gross Profit           │                   '0.000400553510226294'                   │
+│      Estimated Net Profit       │                  '-0.001903616489773706'                   │
+│       Estimated Gas Price       │                        '5000000000'                        │
+│        Actual Gas Price         │                         'Unknown'                          │
+│       Estimated Gas Units       │                          '460834'                          │
+│      Actual Gas Units Used      │                         'Unknown'                          │
+│   Estimated transaction Cost    │                        '0.00230417'                        │
+│     Actual Transaction Cost     │                         'Unknown'                          │
+│       ETH Balance Before        │                   '0.877892006888703826'                   │
+│        ETH Balance After        │                   '0.877892006888703826'                   │
+│ Flash Loan Token Balance Before │                            '0'                             │
+│ Flash Loan Token Balance After  │                            '0'                             │
+│  Flash Loan Token Gained/Lost   │                            '0'                             │
+│           Net Profit            │                          '0 WBNB'                          │
+└─────────────────────────────────┴────────────────────────────────────────────────────────────┘
