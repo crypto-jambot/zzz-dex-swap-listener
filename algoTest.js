@@ -13,7 +13,7 @@ const main = async () => {
 
     // Execute Depth First Search Algorithm.
     const startTime = new Date();
-    const { paths, swaps } = getAllPossiblePaths(Constants.USDC_POLYGON, 4, adjacencyList);
+    const { paths, swaps } = getAllPossiblePaths(Constants.WETH_POLYGON, 4, adjacencyList);
     const endTime = new Date();
 
     console.log(`\nTime taken: ${(endTime - startTime) / 1000} seconds.`);
@@ -51,44 +51,61 @@ const getAllPossiblePaths = (tokenAddress, searchDepth, adjacencyList) => {
 
     let node = getNodeFromAddress(tokenAddress, adjacencyList);
 
-    const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
-    const numEdges = adjacencyList.get(node).length;
-    bar.start(numEdges, 0);
-    let counter = 0;
+    // const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
+    // const numEdges = adjacencyList.get(node).length;
+    // bar.start(numEdges, 0);
+    // let counter = 0;
 
-    const dfs = (node, path = new Set(), swap = new Set(), exchanges = null) => {
-        path.add(node);
-        if (exchanges != null) swap.add(exchanges);
+    const dfsIterative = (root) => {
+        let path = new Set();
+        let swap = new Set();
+        let stack = [];
+        path.add(root);
+        // if (exchanges != null) swap.add(exchanges);
 
-        for (const edge of adjacencyList.get(node)) {
-            const serializedEdge = JSON.stringify({
-                symbol: edge.symbol,
-                address: edge.address,
-                decimals: edge.decimals,
+        // Push all children of root into the stack
+        for (const child of adjacencyList.get(root)) {
+            stack.push(child);
+        }
+
+        while (stack.length != 0) {
+            let node = stack.pop();
+            const serializedNode = JSON.stringify({
+                symbol: node.symbol,
+                address: node.address,
+                decimals: node.decimals,
             });
+            console.log(serializedNode);
+            const serializedExchanges = JSON.stringify(node.exchanges);
 
-            if (edge.address === tokenAddress) {
-                paths.push([...Array.from(path), serializedEdge]);
-                swaps.push([...Array.from(swap), exchanges]);
-            }
+            path.add(serializedNode);
+            swap.add(serializedExchanges);
 
-            if (!path.has(serializedEdge)) {
-                if (path.size < searchDepth) {
-                    const serializedExchanges = JSON.stringify(edge.exchanges);
-                    dfs(serializedEdge, path, swap, serializedExchanges);
-                    path.delete(serializedEdge);
-                    swap.delete(serializedExchanges);
+            for (const child of adjacencyList.get(serializedNode)) {
+                const serializedChild = JSON.stringify({
+                    symbol: child.symbol,
+                    address: child.address,
+                    decimals: child.decimals,
+                });
+                const serializedChildExchanges = JSON.stringify(child.exchanges);
+
+                if (child.address === tokenAddress) {
+                    paths.push([...Array.from(path), serializedChild]);
+                    swaps.push([...Array.from(swap), serializedChildExchanges]);
                 }
-            }
-            if (path.size == 1) {
-                counter++;
-                bar.update(counter);
+
+                if (!path.has(serializedChild)) {
+                    if (path.size < searchDepth) {
+                        stack.push(child);
+                    }
+                }
             }
         }
     };
 
-    dfs(node);
-    bar.stop();
+    dfsIterative(node);
+    console.log(paths);
+    // bar.stop();
     return { paths, swaps };
 };
 
