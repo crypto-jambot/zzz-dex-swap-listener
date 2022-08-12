@@ -1,0 +1,48 @@
+[
+  {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "symbol",
+        "type": "STRING"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "address",
+        "type": "STRING"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "decimals",
+        "type": "INTEGER"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "tokenPath",
+    "type": "RECORD"
+  },
+  {
+    "fields": [
+      {
+        "fields": [
+          {
+            "mode": "REQUIRED",
+            "name": "name",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "pairAddress",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "options",
+        "type": "RECORD"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "exchangePath",
+    "type": "RECORD"
+  }
+]

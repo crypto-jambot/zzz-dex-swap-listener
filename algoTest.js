@@ -1,3 +1,4 @@
+import fs from 'fs';
 import { queryGraphData } from './src/util/util';
 import cliProgress from 'cli-progress';
 import * as Constants from './src/constants/constants';
@@ -13,11 +14,11 @@ const main = async () => {
 
     // Execute Depth First Search Algorithm.
     const startTime = new Date();
-    const { paths, swaps } = getAllPossiblePaths(Constants.USDC_POLYGON, 4, adjacencyList);
+    const numPaths = getAllPossiblePaths(Constants.WETH_POLYGON, 4, adjacencyList, 'WETH_POLYGON_PATHS.jsonl');
     const endTime = new Date();
 
     console.log(`\nTime taken: ${(endTime - startTime) / 1000} seconds.`);
-    console.log(`Number of Paths: ${paths.length}`);
+    console.log(`Number of Paths: ${numPaths}`);
 };
 
 const addNode = (adjacencyList, node) => {
@@ -45,20 +46,17 @@ const getNodeFromAddress = (tokenAddress, adjacencyList) => {
     })[0];
 };
 
-const getAllPossiblePaths = (tokenAddress, searchDepth, adjacencyList) => {
-    let paths = [];
-    let swaps = [];
-
+const getAllPossiblePaths = (tokenAddress, searchDepth, adjacencyList, filename) => {
     let node = getNodeFromAddress(tokenAddress, adjacencyList);
-
     const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
     const numEdges = adjacencyList.get(node).length;
     bar.start(numEdges, 0);
     let counter = 0;
+    let numPaths = 0;
 
-    const dfs = (node, path = new Set(), swap = new Set(), exchanges = null) => {
+    const dfs = (node, path = new Set(), swaps = new Set(), exchanges = null) => {
         path.add(node);
-        if (exchanges != null) swap.add(exchanges);
+        if (exchanges != null) swaps.add(exchanges);
 
         for (const edge of adjacencyList.get(node)) {
             const serializedEdge = JSON.stringify({
@@ -68,16 +66,31 @@ const getAllPossiblePaths = (tokenAddress, searchDepth, adjacencyList) => {
             });
 
             if (edge.address === tokenAddress) {
-                paths.push([...Array.from(path), serializedEdge]);
-                swaps.push([...Array.from(swap), exchanges]);
+                numPaths++;
+                fs.appendFileSync(
+                    filename,
+                    JSON.stringify({
+                        tokenPath: [...Array.from(path).map((e) => JSON.parse(e)), JSON.parse(serializedEdge)],
+                        exchangePath: [
+                            ...Array.from(swaps).map((e) => {
+                                return {
+                                    options: JSON.parse(e),
+                                };
+                            }),
+                            {
+                                options: JSON.parse(exchanges),
+                            },
+                        ],
+                    }) + '\n'
+                );
             }
 
             if (!path.has(serializedEdge)) {
                 if (path.size < searchDepth) {
                     const serializedExchanges = JSON.stringify(edge.exchanges);
-                    dfs(serializedEdge, path, swap, serializedExchanges);
+                    dfs(serializedEdge, path, swaps, serializedExchanges);
                     path.delete(serializedEdge);
-                    swap.delete(serializedExchanges);
+                    swaps.delete(serializedExchanges);
                 }
             }
             if (path.size == 1) {
@@ -89,7 +102,7 @@ const getAllPossiblePaths = (tokenAddress, searchDepth, adjacencyList) => {
 
     dfs(node);
     bar.stop();
-    return { paths, swaps };
+    return numPaths;
 };
 
 main();
