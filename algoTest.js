@@ -14,7 +14,7 @@ const main = async () => {
 
     // Execute Depth First Search Algorithm.
     const startTime = new Date();
-    const numPaths = getAllPossiblePaths(Constants.WETH_POLYGON, 4, adjacencyList, 'WETH_POLYGON_PATHS.jsonl');
+    const numPaths = getAllPossiblePaths(Constants.WMATIC_POLYGON, 4, adjacencyList, 'WMATIC_POLYGON_PATHS.jsonl');
     const endTime = new Date();
 
     console.log(`\nTime taken: ${(endTime - startTime) / 1000} seconds.`);
@@ -64,11 +64,12 @@ const getAllPossiblePaths = (tokenAddress, searchDepth, adjacencyList, filename)
                 address: edge.address,
                 decimals: edge.decimals,
             });
+            const serializedExchanges = JSON.stringify(edge.exchanges);
 
             if (edge.address === tokenAddress) {
                 numPaths++;
                 fs.appendFileSync(
-                    filename,
+                    `src/output/${filename}`,
                     JSON.stringify({
                         tokenPath: [...Array.from(path).map((e) => JSON.parse(e)), JSON.parse(serializedEdge)],
                         exchangePath: [
@@ -78,7 +79,7 @@ const getAllPossiblePaths = (tokenAddress, searchDepth, adjacencyList, filename)
                                 };
                             }),
                             {
-                                options: JSON.parse(exchanges),
+                                options: JSON.parse(serializedExchanges),
                             },
                         ],
                     }) + '\n'
@@ -87,7 +88,6 @@ const getAllPossiblePaths = (tokenAddress, searchDepth, adjacencyList, filename)
 
             if (!path.has(serializedEdge)) {
                 if (path.size < searchDepth) {
-                    const serializedExchanges = JSON.stringify(edge.exchanges);
                     dfs(serializedEdge, path, swaps, serializedExchanges);
                     path.delete(serializedEdge);
                     swaps.delete(serializedExchanges);
