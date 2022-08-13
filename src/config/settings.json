@@ -3,5 +3,5 @@
   "blockchain": "polygon",
   "nodeProvider": "CHAINSTACK_POLYGON",
   "bqDataset": "polygon",
-  "bqTable": "arbitrageable_pairs"
+  "bqTable": "wmatic_paths_light"
 }

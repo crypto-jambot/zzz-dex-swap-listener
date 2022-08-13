@@ -115,6 +115,15 @@ const runAll = async () => {
     }
 };
 
+const processSwap = async () => {
+    console.log('Fetching Pairs from BigQuery to listen for...');
+    const paths = await queryPairs();
+    for (const path of paths) {
+        await axios.post(`${process.env.BOT_ENDPOINT}`, path);
+    }
+    console.log('Done Big Boi');
+};
+
 const main = async () => {
     switch (process.argv[2]) {
         case 'listen':
@@ -128,6 +137,9 @@ const main = async () => {
             break;
         case 'runOne':
             runOne(process.argv[3]);
+            break;
+        case 'bread':
+            processSwap();
             break;
         default:
             listen();
