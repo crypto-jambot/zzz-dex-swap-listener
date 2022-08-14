@@ -1,48 +1,53 @@
 [
   {
+    "name": "tokenPath",
+    "type": "RECORD",
+    "mode": "REPEATED",
     "fields": [
       {
-        "mode": "NULLABLE",
         "name": "symbol",
-        "type": "STRING"
+        "type": "STRING",
+        "mode": "NULLABLE"
       },
       {
-        "mode": "REQUIRED",
         "name": "address",
-        "type": "STRING"
+        "type": "STRING",
+        "mode": "REQUIRED"
       },
       {
-        "mode": "REQUIRED",
         "name": "decimals",
-        "type": "INTEGER"
+        "type": "INTEGER",
+        "mode": "REQUIRED"
       }
-    ],
-    "mode": "REPEATED",
-    "name": "tokenPath",
-    "type": "RECORD"
+    ]
   },
   {
+    "name": "exchangePath",
+    "type": "RECORD",
+    "mode": "REPEATED",
     "fields": [
       {
+        "name": "options",
+        "type": "RECORD",
+        "mode": "REPEATED",
         "fields": [
           {
-            "mode": "REQUIRED",
             "name": "name",
-            "type": "STRING"
+            "type": "STRING",
+            "mode": "REQUIRED"
           },
           {
-            "mode": "NULLABLE",
             "name": "pairAddress",
-            "type": "STRING"
+            "type": "STRING",
+            "mode": "NULLABLE"
           }
-        ],
-        "mode": "REPEATED",
-        "name": "options",
-        "type": "RECORD"
+        ]
+      },
+      {
+        "name": "ordered",
+        "type": "BOOLEAN",
+        "mode": "REQUIRED"
       }
-    ],
-    "mode": "REPEATED",
-    "name": "exchangePath",
-    "type": "RECORD"
+    ]
   }
 ]

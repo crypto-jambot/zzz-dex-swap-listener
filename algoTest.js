@@ -14,7 +14,7 @@ const main = async () => {
 
     // Execute Depth First Search Algorithm.
     const startTime = new Date();
-    const numPaths = getAllPossiblePaths(Constants.WMATIC_POLYGON, 4, adjacencyList, 'WMATIC_POLYGON_PATHS.jsonl');
+    const numPaths = getAllPossiblePaths(Constants.WMATIC_POLYGON, 4, adjacencyList, 'WMATIC_POLYGON_PATHS_LIGHT.jsonl');
     const endTime = new Date();
 
     console.log(`\nTime taken: ${(endTime - startTime) / 1000} seconds.`);
@@ -64,7 +64,10 @@ const getAllPossiblePaths = (tokenAddress, searchDepth, adjacencyList, filename)
                 address: edge.address,
                 decimals: edge.decimals,
             });
-            const serializedExchanges = JSON.stringify(edge.exchanges);
+            const serializedExchanges = JSON.stringify({
+                options: edge.exchanges,
+                ordered: !edge.isToken0,
+            });
 
             if (edge.address === tokenAddress) {
                 numPaths++;
@@ -72,16 +75,19 @@ const getAllPossiblePaths = (tokenAddress, searchDepth, adjacencyList, filename)
                     `src/output/${filename}`,
                     JSON.stringify({
                         tokenPath: [...Array.from(path).map((e) => JSON.parse(e)), JSON.parse(serializedEdge)],
-                        exchangePath: [
-                            ...Array.from(swaps).map((e) => {
-                                return {
-                                    options: JSON.parse(e),
-                                };
-                            }),
-                            {
-                                options: JSON.parse(serializedExchanges),
-                            },
-                        ],
+                        exchangePath: [...Array.from(swaps).map((e) => JSON.parse(e)), JSON.parse(serializedExchanges)],
+                        // exchangePath: [
+                        //     ...Array.from(swaps).map((e) => {
+                        //         return {
+                        //             options: JSON.parse(e),
+                        //             ordered: !edge.isToken0,
+                        //         };
+                        //     }),
+                        //     {
+                        //         options: JSON.parse(serializedExchanges),
+                        //         ordered: !edge.isToken0,
+                        //     },
+                        // ],
                     }) + '\n'
                 );
             }
