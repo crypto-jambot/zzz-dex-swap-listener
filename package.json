@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node -r esm .",
     "dev": "nodemon -r esm ./src/index.js",
-    "doc": "jsdoc -c jsdoc.json"
+    "doc": "jsdoc -c jsdoc.json",
+    "algo": "node -r esm ./algoTest.js"
   },
   "repository": {
     "type": "git",

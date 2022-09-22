@@ -15,7 +15,7 @@ import settings from '../config/settings.json';
 import IUniswapV2Pair from '@uniswap/v2-core/build/IUniswapV2Pair.json';
 
 export const queryPairs = async () => {
-    const queryString = `SELECT * FROM \`${process.env.BIGQUERY_PROJECT}.${settings.bqDataset}.${settings.bqTable}\``;
+    const queryString = `SELECT * FROM \`${process.env.BIGQUERY_PROJECT}.${settings.bqDataset}.${settings.bqTable}\``; /*WHERE ARRAY_LENGTH(tokenPath) = 4*/
     return await query(queryString);
 };
 

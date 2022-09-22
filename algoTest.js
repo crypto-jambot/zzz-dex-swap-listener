@@ -14,7 +14,7 @@ const main = async () => {
 
     // Execute Depth First Search Algorithm.
     const startTime = new Date();
-    const numPaths = getAllPossiblePaths(Constants.WMATIC_POLYGON, 4, adjacencyList, 'WMATIC_POLYGON_PATHS_LIGHT.jsonl');
+    const numPaths = getAllPossiblePaths(Constants.WMATIC_POLYGON, 4, adjacencyList, 'WMATIC_POLYGON_PATHS.jsonl');
     const endTime = new Date();
 
     console.log(`\nTime taken: ${(endTime - startTime) / 1000} seconds.`);

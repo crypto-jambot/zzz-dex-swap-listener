@@ -118,8 +118,11 @@ const runAll = async () => {
 const processSwap = async () => {
     console.log('Fetching Pairs from BigQuery to listen for...');
     const paths = await queryPairs();
+    let counter = 0;
     for (const path of paths) {
         await axios.post(`${process.env.BOT_ENDPOINT}`, path);
+        counter++;
+        if (counter >= 1) break;
     }
     console.log('Done Big Boi');
 };
