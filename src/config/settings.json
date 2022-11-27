@@ -1,7 +1,8 @@
 {
   "isLocal": false,
-  "blockchain": "polygon",
-  "nodeProvider": "CHAINSTACK_POLYGON",
-  "bqDataset": "polygon",
-  "bqTable": "wmatic_paths_light"
+  "blockchain": "ethereum",
+  "nodeProvider": "PastyBOI",
+  "bqDataset": "ethereum",
+  "bqTable": "arbitrageable_pairs",
+  "bqTableLight": "wmatic_paths_light"
 }

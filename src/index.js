@@ -10,7 +10,7 @@
 import 'dotenv/config';
 import axios from 'axios';
 import Big from 'big.js';
-import { queryPairs, getPairContractsForEachPair, querySinglePair, getPairContract, sendPairs } from './util/util';
+import { queryPairs, getPairContractsForEachPair, querySinglePair, sendPairs, queryPairsLight } from './util/util';
 
 const listen = async () => {
     console.log('Fetching Pairs from BigQuery to listen for...');
@@ -117,12 +117,14 @@ const runAll = async () => {
 
 const processSwap = async () => {
     console.log('Fetching Pairs from BigQuery to listen for...');
-    const paths = await queryPairs();
+    // const paths = await queryPairs();
+    const paths = await queryPairsLight();
     let counter = 0;
     for (const path of paths) {
         await axios.post(`${process.env.BOT_ENDPOINT}`, path);
+        console.log(counter);
         counter++;
-        if (counter >= 1) break;
+        // if (counter >= 1) break;
     }
     console.log('Done Big Boi');
 };
